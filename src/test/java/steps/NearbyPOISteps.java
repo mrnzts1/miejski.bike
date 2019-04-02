@@ -46,12 +46,7 @@ public class NearbyPOISteps {
         new NearbyPOIView()
                 .checkingIfNearbyPOIIsChangedToAroundGPS();
     }
-    @When("^User unselecting all filter checkboxes")
-    public void unselectingAllFilterCheckboxes() throws Throwable{
-        new NearbyPOIView()
-                .clickingFilterIcon()
-                .unselectingAllCheckboxes();
-    }
+
     @Then("^An empty POI list is displayed")
     public void checkingIfNothingToDisplayIsVisible() throws Throwable{
         new NearbyPOIView()

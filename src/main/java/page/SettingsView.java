@@ -3,9 +3,7 @@ package page;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.junit.Assert;
-
 import java.net.MalformedURLException;
-
 import static org.junit.Assert.assertTrue;
 
 public class SettingsView extends Page{

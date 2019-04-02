@@ -24,15 +24,14 @@ public class MapSteps {
                 .rotatingDeviceToLandscape()
                 .acceptingAppConditionsIfAppears()
                 .acceptingAccessToLocation();
-        //  .rotatingDeviceToPortrait();
     }
     @Given("^User is located in Warsaw center")
-    public void usersLocationIssettingInWarsawCenter() throws Throwable{
+    public void usersLocationIsSettingInWarsawCenter() throws Throwable{
         new MapView()
                 .setLocationInWarsawCenter();
     }
     @Given("^User is located out of Warsaw")
-    public void usersLocationIssettingOutOfWarsaw() throws Throwable{
+    public void usersLocationIsSettingOutOfWarsaw() throws Throwable{
         new MapView()
                 .setLocationOutOfWarsaw();
     }
@@ -62,12 +61,6 @@ public class MapSteps {
     public void userDoesNotAcceptAppConditions() throws Throwable {
         new MapView()
                 .notAcceptingAppConditionsIfAppears();
-    }
-
-    @Then("^App is closed$")
-    public void appIsClosing() throws Throwable {
-        new MapView()
-                .checkingMenuDrawerIsNotDisplayed();
     }
 
     @Then("^All positions in legend are displayed")

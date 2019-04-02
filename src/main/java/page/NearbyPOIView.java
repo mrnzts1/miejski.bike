@@ -2,13 +2,10 @@ package page;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.junit.Assert;
-
 import java.net.MalformedURLException;
 import java.util.List;
-
 import static config.AndroidDriverFactory.getDriver;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 import static org.junit.Assert.assertTrue;
@@ -140,13 +137,7 @@ public class NearbyPOIView extends Page {
         assertTrue(NEARBY_POI_AROUND_GPS.isDisplayed());
         return this;
     }
-    public NearbyPOIView unselectingAllCheckboxes() throws MalformedURLException {
-        for (int i =0; i < 3; i++){
-            ALL_CHECKBOXES.get(i).click();
-        }
-        getDriver().pressKeyCode(AndroidKeyCode.BACK);
-        return this;
-    }
+
     public NearbyPOIView checkingIfEmptyListMessageIsDisplayed() {
         assertTrue(POI_LIST_EMPTY_MESSAGE.isDisplayed());
         return this;

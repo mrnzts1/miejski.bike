@@ -62,8 +62,6 @@ public class MenuView extends Page {
 
     public MenuView clickingAboutUS() {
         ABOUT_US.click();
-        //WebDriverWait wait = new WebDriverWait(getDriver(), 15);
-        //    getDriver().pressKeyCode(AndroidKeyCode.BACK);
         return this;
     }
 

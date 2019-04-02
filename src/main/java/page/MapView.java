@@ -27,9 +27,6 @@ public class MapView extends Page {
     @AndroidFindBy(xpath=("//android.widget.Button[@text='ZEZWÓL']"))
     protected MobileElement ALLOW_LOCATION_ACCESS;
 
-//    @AndroidFindBy(id = "permission_allow_button")
-//    protected MobileElement ALLOW_LOCATION_ACCESS;
-
     @AndroidFindBy(id = "permission_deny_button")
     protected MobileElement DENY_LOCATION_ACCESS;
 
@@ -63,15 +60,6 @@ public class MapView extends Page {
     @AndroidFindBy(xpath=("//android.widget.TextView[@text='W budowie']"))
     protected MobileElement UNDER_CONSTRUCTION;
 
-//    @AndroidFindBy(xpath=("//android.widget.Toast[1]"))
-//    protected MobileElement TOAST;
-
-//    @AndroidFindBy(xpath=("//android.widget.Toast[2][@text='Włączono zapisywanie trasy']"))
-//    protected MobileElement TOAST;
-
-//    @AndroidFindBy(xpath=("//*[contains(@text,'Włączono zapisywanie trasy')]"))
-//    protected MobileElement TOAST;
-
     public MapView() throws MalformedURLException {
         super();
     }
@@ -93,7 +81,6 @@ public class MapView extends Page {
 
     public MapView notAcceptingAppConditionsIfAppears(){
         CANCEL_BUTTON.click();
-        // assertFalse(MENU_BUTTON.isDisplayed());
         return this;}
 
     public MapView acceptingAccessToLocation(){
@@ -126,12 +113,6 @@ public class MapView extends Page {
         WebDriverWait wait = new WebDriverWait(getDriver(), 15);
         wait.until(ExpectedConditions.elementToBeClickable(MENU_BUTTON));
         MENU_BUTTON.click();
-        return this;
-    }
-
-    public MapView checkingMenuDrawerIsNotDisplayed() throws MalformedURLException{
-        //  assertFalse(MENU_BUTTON.isDisplayed());
-        //  getDriver().startActivity(new Activity("pl.wtopolski.android.warsawbikepath", "bike.miejski.map.view.MapActivity"));
         return this;
     }
 
@@ -169,8 +150,6 @@ public class MapView extends Page {
     }
 
     public MapView setLocationOutOfWarsaw() throws Throwable{
-       // Location location = new Location(52.6245461, 20.36986, 300);  //use html5
-
         setLocation(52.6245461, 20.36986, 300);
         return this;
     }
