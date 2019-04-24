@@ -64,12 +64,12 @@ public class MapView extends Page {
         super();
     }
 
-    public MapView rotatingDeviceToLandscape() throws Throwable{
+    public MapView rotatingDeviceToLandscape() throws MalformedURLException{
         getDriver().rotate(ScreenOrientation.LANDSCAPE);
         return this;
     }
 
-    public MapView rotatingDeviceToPortrait() throws Throwable{
+    public MapView rotatingDeviceToPortrait() throws MalformedURLException{
         getDriver().rotate(ScreenOrientation.PORTRAIT);
         return this;
     }
@@ -116,7 +116,7 @@ public class MapView extends Page {
         return this;
     }
 
-    public MapView clickingLegendButton() throws Throwable{
+    public MapView clickingLegendButton() throws MalformedURLException{
         LEGEND_BUTTON.click();
         TouchAction action = new TouchAction((getDriver()));
         action.longPress(element(BIKEWAYS)).moveTo(element(INFORMATION_ICON)).release().perform();
@@ -131,25 +131,25 @@ public class MapView extends Page {
         return this;
     }
 
-    public MapView recordingTrace()throws Throwable{
+    public MapView recordingTrace() throws InterruptedException{
         START_RECORDING_BUTTON.click();
         STOP_RECORDING_BUTTON.click();
         Thread.sleep(5000);
         return this;
     }
 
-    public MapView setLocation(double latitude, double longitude, double altitude) throws Throwable{
+    public MapView setLocation(double latitude, double longitude, double altitude) throws MalformedURLException{
         Location  location = new Location(latitude, longitude, altitude);
         getDriver().setLocation(location);
         return this;
     }
 
-    public MapView setLocationInWarsawCenter() throws Throwable{
+    public MapView setLocationInWarsawCenter() throws MalformedURLException{
         setLocation(52.228971, 21.0048278, 300);
         return this;
     }
 
-    public MapView setLocationOutOfWarsaw() throws Throwable{
+    public MapView setLocationOutOfWarsaw() throws MalformedURLException{
         setLocation(52.6245461, 20.36986, 300);
         return this;
     }

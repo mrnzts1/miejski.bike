@@ -143,23 +143,23 @@ public class NearbyPOIView extends Page {
         return this;
     }
 
-    public NearbyPOIView clickingIbomboPoi() throws Throwable {
+    public NearbyPOIView clickingIbomboPoi() throws MalformedURLException {
         IBOMBO.click();
         openingPOIdrawer();
         return this;
     }
-    public NearbyPOIView clickingVeturiloPoi() throws Throwable {
+    public NearbyPOIView clickingVeturiloPoi() throws MalformedURLException {
         VETURILO.click();
         openingPOIdrawer();
         return this;
     }
-    public NearbyPOIView clickingBicycleParkingPoi() throws Throwable {
+    public NearbyPOIView clickingBicycleParkingPoi() throws MalformedURLException {
         BICYCLE_PARKING.click();
         openingPOIdrawer();
         return this;
     }
 
-    public NearbyPOIView openingPOIdrawer()throws Throwable{
+    public NearbyPOIView openingPOIdrawer()throws MalformedURLException{
         TouchAction action = new TouchAction((getDriver()));
         action.longPress(element(POI_HANDLE)).moveTo(element(MAIN_TOOLBAR)).release().perform();
         return this;
